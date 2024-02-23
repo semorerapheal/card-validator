@@ -6,7 +6,7 @@
     // Add the 1st event listener to the input for so it can check if is a number
     inputElement.addEventListener('input' , function () {
         // Get the entered value
-        const inputValue = inputElement.value;
+        const inputValue = inputElement.value.replace(/\s/g, '');
 
         // Check if the value entered is a number
         if (isNaN(inputValue)) {
@@ -21,7 +21,7 @@
         }
     });
 
-    // Add the 2nd event listener to the validate button so it can check if the number is a valid card id
+          // Add the 2nd event listener to the validate button so it can check if the number is a valid card id
 
     validateButton.addEventListener('click', function () {
 
@@ -82,6 +82,7 @@
 
 
 // function validator(cardNum) {
+//     // const replace = cardNum.replace(/\s/, '')
 //     const num = cardNum.toString().split('').map(Number);
 
 //     // loop through and multiply every second num from right to left
@@ -103,3 +104,5 @@
 
 //     return isValid;
 // }
+
+// console.log(validator(121 345678 45678));
